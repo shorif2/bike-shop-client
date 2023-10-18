@@ -22,7 +22,7 @@ const Navbar = () => {
         {navLinks}
       </ul>
     </div>
-    <NavLink><button className="btn btn-ghost normal-case text-xl">LOVEO</button></NavLink>
+    <NavLink><button className="btn btn-ghost normal-case text-xl text-[#7FB82D]">LOVEO</button></NavLink>
     
   </div>
   <div className="navbar-center hidden lg:flex">
