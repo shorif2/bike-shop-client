@@ -17,6 +17,7 @@ import MyCart from './Pages/MyCart/MyCart';
 import Contact from './Pages/Contact/Contact';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import AuthProvider from './AuthProvider';
+import PrivetRouter from './Pages/PrivetRouter/PrivetRouter';
 
 
 const router = createBrowserRouter([
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/my-cart',
-        element: <MyCart></MyCart>
+        element: <PrivetRouter><MyCart></MyCart></PrivetRouter>
       },
       {
         path: '/contact',

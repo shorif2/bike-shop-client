@@ -35,7 +35,7 @@ const location = useLocation()
         .then((res)=>{
             console.log(res);
           toast.success('Login Successful')
-        //   navigate(location?.state ? location.state : '/' );
+        
         navigate(location?.state ? location.state: '/' );
       })
       .catch((error) =>{

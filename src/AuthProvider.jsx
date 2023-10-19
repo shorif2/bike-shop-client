@@ -17,11 +17,11 @@ const AuthProvider = ({children}) => {
 
     console.log(user);
     useEffect(()=>{
-        onAuthStateChanged(auth, (newUser) => {
+        const observerRequest = onAuthStateChanged(auth, (newUser) => {
             setUser(newUser);
             setLoading(false)
         })
-
+return ()=>observerRequest()
     },[])
 
 
