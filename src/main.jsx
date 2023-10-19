@@ -11,13 +11,19 @@ import Home from './Pages/Home/Home';
 import AddProduct from './components/AddProduct';
 import UpdateProduct from './components/UpdateProduct';
 import Root from './Root';
+import LogIn from './Pages/LogIn/LogIn';
+import Register from './Pages/LogIn/Register';
+import MyCart from './Pages/MyCart/MyCart';
+import Contact from './Pages/Contact/Contact';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import AuthProvider from './AuthProvider';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -30,8 +36,25 @@ const router = createBrowserRouter([
 
       },
       {
-        path:'/update-product',
-        element: <UpdateProduct></UpdateProduct>
+        path:'/update-product/:id',
+        element: <UpdateProduct></UpdateProduct>,
+        loader: ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+      },
+      {
+        path: '/log-in',
+        element: <LogIn></LogIn>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
+      },
+      {
+        path: '/my-cart',
+        element: <MyCart></MyCart>
+      },
+      {
+        path: '/contact',
+        element: <Contact></Contact>
       }
     ]
   },
@@ -39,6 +62,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+     <AuthProvider><RouterProvider router={router} /></AuthProvider>
   </React.StrictMode>,
 )
