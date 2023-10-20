@@ -2,8 +2,8 @@
 
 const ContactUs = () => {
     return (
-        <div className="flex container mx-auto w-full my-10">
-            <div className="flex flex-col justify-center space-y-6 w-2/4">
+        <div className="flex flex-col lg:flex-row container mx-auto px-4 md:px-6 lg:px-20 w-full my-10">
+            <div className="flex flex-col justify-center space-y-6 lg:w-2/4">
 <h2 className="text-3xl font-bold ">Get in Touch</h2>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugiat excepturi nihil amet, rerum nulla magni fuga atque </p>
 <h3 className="text-2xl font-semibold">4930 Alaska Hwy, Fort Nelson
@@ -12,7 +12,7 @@ British Columbia, V0C 1C0</h3>
 <p>support@smarteyeapps.com</p>
 
             </div>
-            <div className="w-2/4">
+            <div className="lg:w-2/4">
             <div className="">
   <div className="flex-col">
     <div className="">

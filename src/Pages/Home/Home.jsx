@@ -2,8 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import ProductCard from "./ProductCard";
 import { useState } from "react";
-import About from "./About";
-import Team from "./Team";
+
 import ContactUs from "../Contact/ContactUs";
 import Brands from "../../components/Brands";
 
@@ -24,7 +23,7 @@ console.log(brands);
 
             <h2 className="text-5xl text-center pt-10"> All bikes we are provide  </h2>
 
-<div className="grid md:grid-cols-3 lg:grid-cols-3 px-20 gap-4 my-20">
+<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 px-4 md:px-6 lg:px-20 gap-4 my-20">
 {
     brands.map(brands => <Brands key={brands._id} brands={brands}></Brands>)
 }
@@ -44,16 +43,16 @@ console.log(brands);
 
             </div>
             <ContactUs></ContactUs>
-            <div className="space-y-4 my-10">
+            <div className="space-y-4 my-10 px-4">
                 <h2 className="text-5xl text-center font-bold pt-10">FAQ</h2>
                 <p className="text-center text-xl font-semibold py-4">Here are some frequently asked questions (FAQ) and answers for our customer</p>
             <div className="collapse collapse-plus bg-base-200 ">
-  <input type="radio" name="my-accordion-3" checked="checked" /> 
+  <input type="radio" name="my-accordion-3"/> 
   <div className="collapse-title text-xl font-medium">
   How do I buy my bike on your website? 
   </div>
   <div className="collapse-content"> 
-    <p>To sell your bike, simply create an account on our website and click on the "Sell Your Bike button. Follow the prompts to provide information about your bike, upload photos, set a price, and list your bike for sale.</p>
+    <p>To sell your bike, simply create an account on our website and click on the Sell Your Bike button. Follow the prompts to provide information about your bike, upload photos, set a price, and list your bike for sale.</p>
   </div>
 </div>
 <div className="collapse collapse-plus bg-base-200">
