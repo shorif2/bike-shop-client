@@ -18,6 +18,8 @@ import Contact from './Pages/Contact/Contact';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import AuthProvider from './AuthProvider';
 import PrivetRouter from './Pages/PrivetRouter/PrivetRouter';
+import Brand from './Pages/Brand/Brand';
+import View from './Pages/View/View';
 
 
 const router = createBrowserRouter([
@@ -56,6 +58,18 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact></Contact>
+      },
+      {
+        path: '/brand/:brand',
+        element: <Brand></Brand>,
+        loader: ({params})=> fetch(`http://localhost:5000/brand/${params.brand}`)
+
+      },
+
+      {
+        path: '/view/:id',
+        element: <View></View>,
+        loader: ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
       }
     ]
   },

@@ -1,7 +1,8 @@
-import { useLoaderData } from "react-router-dom";
+import {  useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
+    const navigate = useNavigate()
 
     const product = useLoaderData()
 
@@ -40,6 +41,7 @@ const UpdateProduct = () => {
                         icon: 'success',
                         confirmButtonText: 'Ok'
                     })
+                    navigate('/brand/Yamaha')
                 }
             })
 
