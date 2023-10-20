@@ -31,7 +31,7 @@ console.log(brands);
             
             <div className="hidden   gap-6 my-20 container mx-auto" >
                 {
-                    products.map((product) =>
+                   products.map((product) =>
                         <ProductCard
                             key={product._id}
                             product={product}>

@@ -12,10 +12,19 @@ const Brand = () => {
     const img2 = brands[1]?.photo
     const img3 = brands[2]?.photo
     const img4 = brands[3]?.photo
+
+    console.log(brands.length);
     return (
 
         // carousel
         <div>
+            {
+                brands.length ===0 ? <div className="h-screen flex items-center justify-center">
+                    <h2 className="text-5xl font-bold text-center w-2/4">
+                        Product Not Available
+                    </h2>
+                    </div> :<div></div>
+            }
            <div>
 
            <div className="carousel w-full">

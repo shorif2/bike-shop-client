@@ -31,17 +31,17 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: ()=> fetch('http://localhost:5000/brand')
+        loader: ()=> fetch('https://technology-today-server.vercel.app/brand')
       },
       {
         path: '/add-product',
-        element: <AddProduct></AddProduct>
+        element: <PrivetRouter><AddProduct></AddProduct></PrivetRouter>
 
       },
       {
         path:'/update-product/:id',
         element: <PrivetRouter><UpdateProduct></UpdateProduct></PrivetRouter>,
-        loader: ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({params})=> fetch(`https://technology-today-server.vercel.app/product/${params.id}`)
       },
       {
         path: '/log-in',
@@ -53,7 +53,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/my-cart',
-        element: <PrivetRouter><MyCart></MyCart></PrivetRouter>
+        element: <PrivetRouter><MyCart></MyCart></PrivetRouter>,
+        
+        // loader: ({params})=> fetch(`https://technology-today-server.vercel.app/cart/${params.email}`)
       },
       {
         path: '/contact',
@@ -62,14 +64,14 @@ const router = createBrowserRouter([
       {
         path: '/brand/:brand',
         element: <Brand></Brand>,
-        loader: ({params})=> fetch(`http://localhost:5000/brand/${params.brand}`)
+        loader: ({params})=> fetch(`https://technology-today-server.vercel.app/brand/${params.brand}`)
 
       },
 
       {
         path: '/view/:id',
         element: <PrivetRouter><View></View></PrivetRouter>,
-        loader: ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({params})=> fetch(`https://technology-today-server.vercel.app/product/${params.id}`)
       }
     ]
   },

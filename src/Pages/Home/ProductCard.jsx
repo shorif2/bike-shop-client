@@ -22,7 +22,7 @@ const ProductCard = ({ product, products, setProducts  }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/product/${_id}`,{
+                fetch(`https://technology-today-server.vercel.app/product/${_id}`,{
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -43,7 +43,9 @@ const ProductCard = ({ product, products, setProducts  }) => {
     }
 
     return (
-        <div className="card card-side bg-base-100 shadow-xl p-4 gap-4">
+        <div>
+
+          <div className="card card-side bg-base-100 shadow-xl p-4 gap-4">
             <figure><img className="w-[150px] h-[150px]" src={photo} alt="Movie" /></figure>
             <div className="flex justify-between w-full pr-4">
                 <div>
@@ -60,6 +62,8 @@ const ProductCard = ({ product, products, setProducts  }) => {
                     </div>
                 </div>
             </div>
+        </div>
+         
         </div>
     );
 };

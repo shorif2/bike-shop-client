@@ -19,7 +19,7 @@ const AddProduct = () => {
         console.log(newProduct);
         // send data to the serer
 
-        fetch('http://localhost:5000/product', {
+        fetch('https://technology-today-server.vercel.app/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -41,8 +41,8 @@ const AddProduct = () => {
 
     }
     return (
-        <div className="container mx-auto p-24">
-            <h2 className="text-3xl font-extrabold">Add Product here</h2>
+        <div className="container mx-auto p-6  lg:p-24">
+            <h2 className="text-3xl font-extrabold py-10 text-center">Add Product here</h2>
             <form onSubmit={handleAddProduct}>
                 {/* form name and quantity row */}
                 <div className="md:flex gap-4 mb-8">

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import toast from "react-hot-toast";
+import { FcCableRelease } from "react-icons/fc";
 
 
 const Navbar = () => {
@@ -39,7 +40,7 @@ const Navbar = () => {
         {navLinks}
       </ul>
     </div>
-    <NavLink><button className="btn btn-ghost normal-case text-xl text-[#7FB82D]">LOVEO</button></NavLink>
+    <NavLink tp='/'><button className="btn normal-case text-xl text-[#7FB82D]"><FcCableRelease></FcCableRelease> Bicko</button></NavLink>
     
   </div>
   <div className="navbar-center hidden lg:flex">

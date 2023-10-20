@@ -24,7 +24,7 @@ const UpdateProduct = () => {
         console.log(UpdatedProduct);
         // send data to the serer
 
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://technology-today-server.vercel.app/product/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

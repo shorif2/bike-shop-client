@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const BrandItem = ({item}) => {
 
     const {_id, photo, name, brand, details} = item
-    console.log(item);
+    
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
