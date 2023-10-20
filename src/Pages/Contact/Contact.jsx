@@ -1,9 +1,10 @@
+import ContactUs from "./ContactUs";
 
 
 const Contact = () => {
     return (
         <div>
-            <h2> Know our Contact</h2>
+            <ContactUs></ContactUs>
         </div>
     );
 };

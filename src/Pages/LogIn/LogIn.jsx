@@ -10,14 +10,16 @@ const LogIn = () => {
     const {googleSignIn, logInWithPass} = useContext(AuthContext);
 
 // const location = useLocation()
-const navigate = useNavigate()
 const location = useLocation()
+const navigate = useNavigate()
+
     // google sign in 
     const handledGoogleSignIn = () => {
        
         googleSignIn()
         .then(()=>{
             toast.success('Login Successful')
+            navigate(location?.state ? location.state: '/' );
             
         })
         .then((error)=>{
@@ -78,8 +80,8 @@ const location = useLocation()
                         </form>
 
                         {/*   */}
-                        <div className="pt-6 flex justify-center text-center ">
-                            <button onClick={handledGoogleSignIn} className=" py-2 px-3 rounded-lg border border-[#69A032]" > Register with <span> <FcGoogle className="inline text-3xl"> </FcGoogle></span> </button>
+                        <div className="pt-6 flex justify-center text-center w-full ">
+                            <button onClick={handledGoogleSignIn} className=" py-2 px-3 rounded-lg border border-[#69A032] w-full" > Register with <span> <FcGoogle className="inline text-3xl"> </FcGoogle></span> </button>
                         </div>
                     </div>
                 </div>
