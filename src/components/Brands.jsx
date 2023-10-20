@@ -7,13 +7,11 @@ const Brands = ({ brands }) => {
         <Link to={`/brand/${brand}`} >
 
             {/* home cart */}
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                <figure><img src={image} alt="Shoes" /></figure>
+            <div className="card h-full card-compact  bg-base-100 shadow-xl">
+                <figure><img className="h-full" src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{brand}</h2>
-                    <div className="card-actions justify-end">
-
-                    </div>
+                    
                 </div>
 
             </div></Link>

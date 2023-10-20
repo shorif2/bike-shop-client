@@ -22,9 +22,9 @@ console.log(brands);
         <div className="container mx-auto">
             <Banner></Banner>
 
-            <h2 className="text-5xl text-center pt-10"> Total Product: {products.length}</h2>
+            <h2 className="text-5xl text-center pt-10"> All bikes we are provide  </h2>
 
-<div className="grid md:grid-cols-2 gap-6 my-20">
+<div className="grid md:grid-cols-3 lg:grid-cols-3 px-20 gap-4 my-20">
 {
     brands.map(brands => <Brands key={brands._id} brands={brands}></Brands>)
 }
