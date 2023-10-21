@@ -27,7 +27,7 @@ const Brand = () => {
             }
            <div>
 
-           <div className="carousel w-full">
+           <div className="carousel pt-6 w-full mb-10">
   <div id="slide1" className="carousel-item relative w-full">
     <img src={img1} className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -57,8 +57,11 @@ const Brand = () => {
     </div>
   </div>
 </div>
+<div>
+    <h2 className="text-4xl text-center font-bold py-6">Available bikes</h2>
+</div>
            </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid  md:grid-cols-2 mx-auto px-2 md:px-6 lg:grid-cols-3 gap-4 py-10">
           {
             brands.map(item => <BrandItem key={item._id} item={item}></BrandItem>)
            }

@@ -29,7 +29,7 @@ const View = () => {
         .then((res) => res.json())
         .then((data) =>{
             if(data.insertedId){
-                toast.success('Login Successful')
+                toast.success('Added Successful')
             }
         })
 
@@ -40,14 +40,37 @@ const View = () => {
         <div>
             <div className="hero  w-full bg-base-200">
   <div className="hero-content flex-col w-1/2">
-    <img src={photo} className="max-w-sm rounded-lg shadow-2xl" />
     <div>
-      <h1 className="text-5xl font-bold py-6">{name}</h1>
-      <p className="">{details}</p>
-      <p className="">{details}</p>
-      <p className="">{details}</p>
-      <p className="">{details}</p>
-      <button onClick={handledAddToCart} className="btn bg-gray-400">Add to cart</button>
+      
+      
+      <div className="h-full">
+            <div className="card w-96 h-full bg-base-100 shadow-xl">
+  <figure className="h-full"><img className="h-full" src={photo} alt="Shoes" /></figure>
+  <div className="card-body">
+    <h2 className="card-title">Product Name: {name}</h2>
+    <h2 className="card-title">Brand Name: {brand}</h2>
+    <p>{details}</p>
+    <div className="rating py-2">
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400"/>
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+</div>
+    <div className="pb-6">
+    <div className="badge badge-outline">{brand}</div> 
+      <div className="badge badge-outline">{type}</div>
+    </div>
+    <button onClick={handledAddToCart} className="btn bg-gray-400">Add to cart</button>
+  </div>
+  
+</div>
+
+        </div>
+
+
+
+      
     </div>
   </div>
 </div>
