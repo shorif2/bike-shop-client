@@ -1,10 +1,11 @@
 # Bicko
 
 
-# Server site Here:
-# https://technology-today-server-shorif-ahameds-projects.vercel.app/
+## Server site Here:
+https://technology-today-server-shorif-ahameds-projects.vercel.app/
 
-# Here is the details about my website
+
+## Here is the details about my website
 
 - This website is mobile responsive
 - Customer can choose their 
