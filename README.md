@@ -18,3 +18,12 @@ https://technology-today-server-shorif-ahameds-projects.vercel.app/
 - Customer create or login account 
 - Product can be add in Add Product page
 - Product data show from database
+
+## Technology
+- HTML
+- CSS
+- Tailwind
+- JS
+- React
+- Firebase
+- MongoDB
